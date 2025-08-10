@@ -1,103 +1,204 @@
-import Image from "next/image";
+import { Handshake } from "lucide-react";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const data = [
+    {
+      title: "Automotive",
+      lines: [
+        "Ford Motor Company, Lear",
+        "Crop, Viseton, American",
+        "Axle Manufacturing"
+      ]
+    },
+    {
+      title: "Automotive",
+      lines: [
+        "Ford Motor Company, Lear",
+        "Crop, Viseton, American",
+        "Axle Manufacturing"
+      ]
+    },
+    {
+      title: "Automotive",
+      lines: [
+        "Ford Motor Company, Lear",
+        "Crop, Viseton, American",
+        "Axle Manufacturing"
+      ]
+    },
+    {
+      title: "Automotive",
+      lines: [
+        "Ford Motor Company, Lear",
+        "Crop, Viseton, American",
+        "Axle Manufacturing"
+      ]
+    },
+    {
+      title: "Automotive",
+      lines: [
+        "Ford Motor Company, Lear",
+        "Crop, Viseton, American",
+        "Axle Manufacturing"
+      ]
+    },
+    {
+      title: "Automotive",
+      lines: [
+        "Ford Motor Company, Lear",
+        "Crop, Viseton, American",
+        "Axle Manufacturing"
+      ]
+    }
+  ];
+
+  return (
+    <main className="min-h-screen">
+      <div className="h-[32rem] bg-gray-100 flex items-center bg-[url('/bb.jpg')] bg-cover bg-center"
+        style={{
+          clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)'
+        }}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl sm:ml-6 lg:ml-12"> {/* Reduced margin-left */}
+            <h1 className="text-white text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">
+              Your Business & Technology Partner
+            </h1>
+            <h1 className="text-white text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+              Our People Make IT Possible
+            </h1>
+            <p className="text-white mb-2">
+              Established in 1998, MyCompany is a global consulting & technology services
+            </p>
+            <p className="text-white mb-6">
+              company serving enterprises in the US, Canada, Europe and India
+            </p>
+            <button className="bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold py-2 px-8 rounded-md shadow-md hover:opacity-90 transition w-fit">
+              View Case Study
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row lg:items-center gap-8 px-6 lg:px-12 py-6 mb-15">
+        {/* Left: Text */}
+        <div className="lg:w-1/2 text-left pl-6 lg:pl-16">
+          <h1 className="text-black text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">
+            Trusted
+          </h1>
+          <p className="text-black">
+            With over two decades of experience working with
+          </p>
+          <p>different verticals, Dechen is positioned to serve the</p>
+          <p>customer needs in a nimble and agile manner.</p>
+          <br />
+          <p className="text-black">
+            Our expertise has helped a wide variety of esteemed
+          </p>
+          <p>clients across a broad spectrum of industries.</p>
+        </div>
+
+        {/* Right: Cards */}
+        <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-xl p-5.5 flex flex-col"
+            >
+              <p className="text-blue-600 font-semibold text-lg mb-2">
+                {item.title}
+              </p>
+              <div className="space-y-1">
+                {item.lines.map((line, i) => (
+                  <p key={i} className="text-gray-700 leading-snug">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="h-[41rem] bg-blue-100 justify-center py-10">
+        <h1 className="text-black text-center text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Areas of Expertise</h1>
+        <p className="text-center">Our service offerings combine technology and industry best practices with in-depth real world experience and business process knowledge to</p>
+        <p className="text-center">help formulate effective business strategies and solutions.</p>
+      </div>
+
+
+      <div className="bg-gray-100 flex flex-col lg:flex-row items-start lg:items-center justify-between px-6 md:px-12 lg:px-20 py-12 gap-12">
+        {/* Left side - cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:w-1/2 w-full">
+          {[1, 2, 3, 4].map((item, index) => (
+            <div key={index} className="relative rounded-lg overflow-hidden shadow-lg">
+              <img
+                src={`https://via.placeholder.com/400x250?text=Image+${item}`}
+                alt="Card"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-between p-4">
+                <p className="text-white font-semibold text-sm sm:text-base leading-snug">
+                  Dechen Consulting Group Wins Lear IT Supplier of the Year Award
+                </p>
+                <button className="text-white text-xs sm:text-sm font-medium hover:underline">
+                  Read More
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Right side - text */}
+        <div className="lg:w-1/2 flex flex-col justify-center text-left lg:pl-14">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4">
+            Dechen Highlights
+          </h1>
+          <p className="text-gray-700 text-sm sm:text-base">
+            Whether it’s creating a solution to an IT roadblock or
+          </p>
+          <p className="text-gray-700 text-sm sm:text-base">
+            sharing best practices through a project case study,
+          </p>
+          <p className="text-gray-700 text-sm sm:text-base">
+            Dechen has plenty of news to share. Take a look at some
+          </p>
+          <p className="text-gray-700 text-sm sm:text-base mb-6">
+            of the highlights here.
+          </p>
+          <button className="bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold py-2 px-6 sm:px-8 rounded-md shadow-md hover:opacity-90 transition w-fit">
+            View More
+          </button>
+        </div>
+      </div>
+
+
+      <div className="h-[41rem] bg-blue-100 py-13">
+        <h1 className="text-black text-center text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">The MyCompany Indifference</h1>
+        <p className="text-center">Smart solutions to make businesses successful</p>
+      </div>
+
+      <div className="bg-gradient-to-r from-purple-600 to-blue-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-8 gap-6">
+  {/* Text Section */}
+  <div className="flex flex-col items-center md:items-start text-white max-w-lg">
+    <p className="text-2xl font-bold leading-snug">Want to Know More?</p>
+    <p className="text-sm md:text-base text-gray-200 mt-1">
+      Get in touch with us and we'll send you the latest information tailored for you.
+    </p>
+  </div>
+
+  {/* Button Section */}
+  <div className="flex justify-center md:justify-end w-full md:w-auto">
+    <button className="flex items-center gap-3 bg-white text-black font-semibold py-3 px-8 rounded-md shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-200">
+      <Handshake size={22} className="text-black" />
+      Let's Connect
+    </button>
+  </div>
+</div>
+
+
+
+    </main>
   );
 }

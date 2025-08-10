@@ -1,10 +1,12 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -16,15 +18,39 @@ export default function Navbar() {
     { label: "Articles and News", href: "/articles" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <div className="fixed top-0 left-0 w-full z-50">
+    <div
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       {/* Main Navbar */}
       <nav className="bg-white shadow-md h-24 flex items-center px-5">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="text-2xl font-bold text-blue-700">
-              <Link href="/" className="">MyCompany</Link>
+              <Link href="/">MyCompany</Link>
             </div>
 
             {/* Desktop Menu */}
@@ -61,13 +87,13 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu - Full width and positioned below navbar */}
+      {/* Mobile Menu */}
       <div
         className={`flex items-start md:hidden w-full bg-gradient-to-br from-blue-800 via-blue-900 to-purple-800 text-white absolute left-0 ${
           isOpen ? "h-[calc(100vh-5rem)]" : "h-0"
         } overflow-hidden transition-all duration-500 ease-in-out`}
       >
-        <div className="container mx-auto px-4 flex  flex-col space-y-8 py-8 text-2xl font-medium">
+        <div className="container mx-auto px-4 flex flex-col space-y-8 py-8 text-2xl font-medium">
           {navItems.map((item, index) => (
             <Link
               key={item.href}
@@ -81,7 +107,6 @@ export default function Navbar() {
           ))}
         </div>
       </div>
-      {/* Spacer to push content below navbar */}
     </div>
   );
 }

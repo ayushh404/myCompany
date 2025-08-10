@@ -55,7 +55,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <div className="h-[32rem] bg-gray-100 flex items-center bg-[url('/n3.jpg')] bg-cover bg-center"
+      <div className="h-[32rem] bg-gray-100 flex items-center bg-[url('/bb.jpg')] bg-cover bg-center"
         style={{
           clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)'
         }}

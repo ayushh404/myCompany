@@ -55,20 +55,20 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <div className="h-[32rem] bg-gray-100 flex items-center bg-[url('/bb.jpg')] bg-cover bg-center"
+      <div className="h-[32rem] bg-gray-100 flex items-center bg-[url('/nyc.jpg')] bg-cover bg-center"
         style={{
           clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)'
         }}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-2xl sm:ml-6 lg:ml-12"> {/* Reduced margin-left */}
-            <h1 className="text-white text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">
+            <h1 className="text-white text-2xl sm:text-3xl font-semibold mb-2 sm:mb-4 font-roboto">
               Your Business & Technology Partner
             </h1>
-            <h1 className="text-white text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+            <h1 className="text-white text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 font-roboto">
               Our People Make IT Possible
             </h1>
-            <p className="text-white mb-2">
+            <p className="text-white mb-2 font-roboto">
               Established in 1998, MyCompany is a global consulting & technology services
             </p>
             <p className="text-white mb-6">
@@ -84,19 +84,16 @@ export default function Home() {
       <div className="flex flex-col lg:flex-row lg:items-center gap-8 px-6 lg:px-12 py-6 mb-15">
         {/* Left: Text */}
         <div className="lg:w-1/2 text-left pl-6 lg:pl-16">
-          <h1 className="text-black text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">
+          <h1 className="text-5xl font-roboto font-semibold mb-6">
             Trusted
           </h1>
-          <p className="text-black">
-            With over two decades of experience working with
+          <p className="text-lg font-roboto leading-relaxed text-gray-900 max-w-xl">
+            With over two decades of experience working with<br />
+            different verticals, Dechen is positioned to serve the<br />
+            customer needs in a nimble and agile manner.<br />
+            Our expertise has helped a wide variety of esteemed<br />
+            clients across a broad spectrum of industries.
           </p>
-          <p>different verticals, Dechen is positioned to serve the</p>
-          <p>customer needs in a nimble and agile manner.</p>
-          <br />
-          <p className="text-black">
-            Our expertise has helped a wide variety of esteemed
-          </p>
-          <p>clients across a broad spectrum of industries.</p>
         </div>
 
         {/* Right: Cards */}
@@ -122,9 +119,9 @@ export default function Home() {
       </div>
 
       <div className="h-[41rem] bg-blue-100 justify-center py-10">
-        <h1 className="text-black text-center text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Areas of Expertise</h1>
-        <p className="text-center">Our service offerings combine technology and industry best practices with in-depth real world experience and business process knowledge to</p>
-        <p className="text-center">help formulate effective business strategies and solutions.</p>
+        <h1 className="text-black text-center text-2xl sm:text-3xl font-roboto font-semibold mb-2 sm:mb-4">Areas of Expertise</h1>
+        <p className="text-center font-roboto">Our service offerings combine technology and industry best practices with in-depth real world experience and business process knowledge to</p>
+        <p className="text-center font-roboto">help formulate effective business strategies and solutions.</p>
       </div>
 
 
@@ -180,22 +177,22 @@ export default function Home() {
       </div>
 
       <div className="bg-gradient-to-r from-purple-600 to-blue-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-8 gap-6">
-  {/* Text Section */}
-  <div className="flex flex-col items-center md:items-start text-white max-w-lg">
-    <p className="text-2xl font-bold leading-snug">Want to Know More?</p>
-    <p className="text-sm md:text-base text-gray-200 mt-1">
-      Get in touch with us and we'll send you the latest information tailored for you.
-    </p>
-  </div>
+        {/* Text Section */}
+        <div className="flex flex-col items-center md:items-start text-white max-w-lg">
+          <p className="text-2xl font-bold leading-snug">Want to Know More?</p>
+          <p className="text-sm md:text-base text-gray-200 mt-1">
+            Get in touch with us and we'll send you the latest information tailored for you.
+          </p>
+        </div>
 
-  {/* Button Section */}
-  <div className="flex justify-center md:justify-end w-full md:w-auto">
-    <button className="flex items-center gap-3 bg-white text-black font-semibold py-3 px-8 rounded-md shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-200">
-      <Handshake size={22} className="text-black" />
-      Let's Connect
-    </button>
-  </div>
-</div>
+        {/* Button Section */}
+        <div className="flex justify-center md:justify-end w-full md:w-auto">
+          <button className="flex items-center gap-3 bg-white text-black font-semibold py-3 px-8 rounded-md shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-200">
+            <Handshake size={22} className="text-black" />
+            Let's Connect
+          </button>
+        </div>
+      </div>
 
 
 

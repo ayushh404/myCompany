@@ -1,44 +1,86 @@
+import OurTeam from "../components/Ourteam";
+import StatStrip from "../components/StatStrip";
+
 export default function AboutPage() {
   return (
-    <div className="min-h-[calc(100vh-4rem)] flex justify-center">
-      <div
-        className="h-[41rem] w-full max-w-[90rem] flex items-end px-4 sm:px-6 md:px-8 py-8 md:pb-8 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(to top right, rgba(42, 42, 42, 0.8), rgba(255,255,255,0) 60%), linear-gradient(to top left, rgba(39, 39, 39, 0.8), rgba(255,255,255,0) 30%),url('/nyc.jpg')`,
-        }}
-      >
-        {/* Container for left + right */}
-        <div className="flex flex-col md:flex-row justify-between w-full gap-8 h-full">
-          
-          {/* Left Section - Modified for responsive behavior */}
-          <div className="w-full max-w-xl text-white mb-6 sm:mb-8 md:mb-0 mt-8 md:mt-0 ml-0 md:ml-8 self-start md:self-end">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg">
-              Our Story
+    <div className="min-h-[calc(100vh-4rem)]">
+      {/* About Us Section */}
+      <div className="bg-gray-200  flex items-center justify-center px-8 py-16">
+        <div className="flex w-full max-w-6xl items-center gap-8 flex-col md:flex-row">
+          {/* Left side - Text */}
+          <div className="flex-1">
+            <h1 className="text-5xl font-roboto font-semibold mb-6">
+              About Us
             </h1>
-            <p className="text-lg sm:text-2xl md:text-4xl font-semibold drop-shadow-lg leading-snug mt-2 sm:mt-4">
-              Explore how MyCompany teams across India
-              are building a better working world
-              through inclusion, innovation and
-              sustainability to shape the future with
+            <p className="text-lg font-roboto leading-relaxed text-gray-900 max-w-xl">
+              HubSpot's company and culture are a lot like our product. They're crafted, not cobbled, for a delightful experience.
             </p>
           </div>
 
-          {/* Right Section - Modified to stick to bottom in responsive */}
-          <div className="w-full max-w-sm text-right self-end ml-auto text-white mt-auto md:mt-0 border-r-2 border-r pr-2">
-            <div className="flex justify-end items-start">
-              <div>
-                <p className="text-white/90 font-medium drop-shadow-md">Featured</p>
-                <p className="drop-shadow-lg font-semibold mt-1">
-                  How will your decisions today shape the future for<br />
-                  generations to come?
-                </p>
-                <p className="text-white/80 drop-shadow-md mt-3">16 July, 2025</p>
-              </div>
-            </div>
+          {/* Right side - Image (Hidden on mobile) */}
+          <div className="h-[16.7rem] w-[25rem] hidden md:block">
+            <img
+              src="/together.jpg"
+              alt="About Us"
+              className="w-full h-full object-cover shadow-lg"
+            />
           </div>
-
         </div>
       </div>
+
+      {/* Our Mission Section */}
+      <div className="flex items-center justify-center px-8 py-16">
+        <div className="flex w-full max-w-6xl flex-col md:flex-row items-center gap-8">
+          {/* Image always on top for mobile */}
+          <div className="order-1 md:order-none h-[21rem] w-full md:w-[32rem]">
+            <img
+              src="/mission.jpg"
+              alt="Our Mission"
+              className="w-full h-full object-cover shadow-lg"
+            />
+          </div>
+
+          {/* Text content */}
+          <div className="flex-1 order-2 md:order-none">
+            <h1 className="text-2xl font-roboto font-semibold mb-3">
+              Our Mission: Helping people of all backgrounds Grow Better
+            </h1>
+            <p className="text-lg font-roboto leading-relaxed text-gray-900 max-w-xl">
+              We believe not just in growing bigger, but in growing better. And growing better means aligning the success of your own business with the success of your customers. Win-win!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Story Section */}
+      <div className="flex items-center justify-center px-8 py-16">
+        <div className="flex w-full max-w-6xl flex-col md:flex-row items-center gap-8">
+          {/* Image always on top for mobile */}
+          <div className="order-1 md:order-2 h-[21rem] w-full md:w-[32rem]">
+            <img
+              src="/duo.jpg"
+              alt="Our Story"
+              className="w-full h-full object-cover shadow-lg"
+            />
+          </div>
+
+          {/* Text content */}
+          <div className="flex-1 order-2 md:order-1">
+            <h1 className="text-2xl font-roboto font-semibold mb-2">
+              Our Story
+            </h1>
+            <p className="text-lg font-roboto leading-relaxed text-gray-900 max-w-xl">
+              In 2004, fellow MIT graduate students Brian Halligan and Dharmesh Shah noticed a major shift in the way people shop and purchase products. Buyers didn't want to be interrupted by ads, they wanted helpful information...
+            </p>
+            <p className="text-lg font-roboto leading-relaxed text-gray-900 max-w-xl">
+              Along the way, HubSpot expanded beyond marketing into a crafted, not cobbled suite of products that create the frictionless customer experience that buyers expect today. Expertly led by CEO Yamini Rangan, HubSpot uses its customer platform built on an AI-powered Smart CRM to help millions of scaling organizations grow better.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <StatStrip/>
+
     </div>
   );
 }

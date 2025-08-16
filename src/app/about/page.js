@@ -1,3 +1,4 @@
+import JoinUs from "../components/JoinUs";
 import OurTeam from "../components/Ourteam";
 import StatStrip from "../components/StatStrip";
 
@@ -80,6 +81,8 @@ export default function AboutPage() {
       </div>
 
       <StatStrip/>
+      <OurTeam/>
+      <JoinUs/>
 
     </div>
   );

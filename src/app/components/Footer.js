@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 py-14">
+    <footer className="bg-slate-200 py-14">
       <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-between gap-10">
         {/* General */}
         <div>

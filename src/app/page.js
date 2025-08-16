@@ -74,7 +74,7 @@ export default function Home() {
             <p className="text-white mb-6">
               company serving enterprises in the US, Canada, Europe and India
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold py-2 px-8 rounded-md shadow-md hover:opacity-90 transition w-fit">
+            <button className="bg-blue-600 text-white font-semibold py-2 px-8 rounded-md shadow-md hover:opacity-90 transition w-fit">
               View Case Study
             </button>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[41rem] bg-blue-100 justify-center py-10">
+      <div className="h-[41rem] bg-gray-200 justify-center py-10">
         <h1 className="text-black text-center text-2xl sm:text-3xl font-roboto font-semibold mb-2 sm:mb-4">Areas of Expertise</h1>
         <p className="text-center font-roboto">Our service offerings combine technology and industry best practices with in-depth real world experience and business process knowledge to</p>
         <p className="text-center font-roboto">help formulate effective business strategies and solutions.</p>
@@ -164,19 +164,19 @@ export default function Home() {
           <p className="text-gray-700 text-sm sm:text-base mb-6">
             of the highlights here.
           </p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold py-2 px-6 sm:px-8 rounded-md shadow-md hover:opacity-90 transition w-fit">
+          <button className="bg-blue-600 text-white font-semibold py-2 px-6 sm:px-8 rounded-md shadow-md hover:opacity-90 transition w-fit">
             View More
           </button>
         </div>
       </div>
 
 
-      <div className="h-[41rem] bg-blue-100 py-13">
-        <h1 className="text-black text-center text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">The MyCompany Indifference</h1>
+      <div className="h-[41rem] bg-gray-200 py-13">
+        <h1 className="text-black font-roboto text-center text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">The MyCompany Indifference</h1>
         <p className="text-center">Smart solutions to make businesses successful</p>
       </div>
 
-      <div className="bg-gradient-to-r from-purple-600 to-blue-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-8 gap-6">
+      <div className="bg-blue-600 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-8 gap-6">
         {/* Text Section */}
         <div className="flex flex-col items-center md:items-start text-white max-w-lg">
           <p className="text-2xl font-bold leading-snug">Want to Know More?</p>

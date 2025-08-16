@@ -27,10 +27,10 @@ export default function StatsStrip() {
               ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transitionDelay: `${index * 200}ms` }}
           >
-            <h2 className="text-5xl font-bold text-gray-900 font-roboto drop-shadow-md">
+            <h2 className="text-5xl font-bold text-blue-700 font-roboto drop-shadow-md">
               {stat.number}
             </h2>
-            <p className="text-lg text-gray-700 font-medium mt-3">
+            <p className="text-lg text-blue-700 font-medium mt-3">
               {stat.label}
             </p>
           </div>

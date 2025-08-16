@@ -55,11 +55,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <div className="h-[32rem] bg-gray-100 flex items-center bg-[url('/nyc.jpg')] bg-cover bg-center"
+      <div className="h-[32rem] bg-gray-100 flex items-center bg-cover bg-center"
         style={{
+          backgroundImage:  "url('/nyc.jpg')",
           clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)'
         }}
       >
+        
+          
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-2xl sm:ml-6 lg:ml-12"> {/* Reduced margin-left */}
             <h1 className="text-white text-2xl sm:text-3xl font-semibold mb-2 sm:mb-4 font-roboto">

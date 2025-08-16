@@ -89,7 +89,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`flex items-start md:hidden w-full bg-gradient-to-br from-blue-800 via-blue-900 to-purple-800 text-white absolute left-0 ${
+        className={`flex items-start md:hidden w-full bg-blue-600 text-white absolute left-0 ${
           isOpen ? "h-[calc(100vh-5rem)]" : "h-0"
         } overflow-hidden transition-all duration-500 ease-in-out`}
       >
